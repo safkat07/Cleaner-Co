@@ -1,4 +1,4 @@
-import React from 'react';
+import logo from '../../../src/assets/Images/clean.jpg'
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
@@ -25,9 +25,23 @@ const Navbar = () => {
             </svg>
           </label>
         </div>
-        <div className="flex-1 px-2 mx-2">Navbar Title</div>
+        <div className="flex-1 px-2 mx-2">
+          <img 
+          className='w-[100px] mt-5 h-24'
+          src={logo} alt="" />
+        </div>
         <div className="flex-none hidden lg:block">
           <div className="flex gap-2 ">
+          <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "btn btn-primary rounded-md btn-sm"
+                  : "btn btn-ghost rounded-md btn-sm"
+              }
+            >
+              Home
+            </NavLink>
             <NavLink
               to="/about"
               className={({ isActive }) =>

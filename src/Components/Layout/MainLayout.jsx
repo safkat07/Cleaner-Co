@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import { NavLink } from "react-router-dom";
+
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
